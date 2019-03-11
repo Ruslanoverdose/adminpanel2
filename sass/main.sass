@@ -1,0 +1,316 @@
+$silver: #f9f9f9
+$silver2: #e0e0e0
+$black: #292929
+$blue: #235fb9
+$green: #389c04
+$red: #dc3545
+$orange: #c38047
+$shadow: 0 2px 4px rgba(0, 0, 0, .2)
+* 
+    padding: 0
+    margin: 0
+    font-family: 'Montserrat', sans-serif
+body 
+    background: $silver
+
+a
+    text-decoration: none !important
+
+/* HEADER */
+
+#header
+    background: #fff
+    height: 60px
+    display: flex
+    align-items: center
+    padding: 0 30px
+    box-shadow: $shadow
+.row__block
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    position: relative
+
+.profileMenu
+    position: absolute
+    bottom: -145px
+    right: -20px
+    background: #ffffff
+    box-shadow: $shadow
+    min-width: 150px
+    border-radius: 3px
+    display: none
+    transition: .3s all
+    hr 
+        margin: 5px 0
+    a 
+        text-decoration: none
+        display: block
+        color: $black
+        padding: 7px 20px
+        &:hover
+            color: $black !important
+            background: $silver
+        &:after
+            position: absolute
+            transform: scale(0,1)
+            content: ""
+            width: 100%
+            height: 100%
+            background: $silver2
+            left: 0
+            top: 0
+            opacity: 1
+            padding: 0 5px
+            opacity: .3
+            transition: .3s
+            overflow: hidden
+        &:active:after
+            transform: scale(1,1)
+
+    li 
+        list-style: none
+
+.headerButton 
+    border: 0
+    background: transparent
+    outline: none !important
+    &__block
+        display: flex
+        justify-content: center
+        align-items: center
+.avatar 
+    border-radius: 100%
+    width: 48px
+    height: 48px
+    overflow: hidden
+    margin-right: 5px
+    // border: 1px solid #1986FF
+    img
+        width: 100%
+        height: 100%
+.arrow 
+    width: 10px
+
+/* SIDEBAR */
+
+#sidebar   
+    position: fixed
+    left: -12%
+    top: 0
+    bottom: 0
+    width: 310px
+    transition: .3s all
+    background-color: #fff
+    box-shadow: $shadow
+.sidebar__top, .item-link  
+    display: flex
+    align-items: center
+    justify-content: space-around
+    min-height: 60px
+.bars 
+    height: 100%
+    .bars__button
+        border: 0
+        background: transparent
+        position: relative
+        padding: 5px 12px
+        outline: none
+        &:after
+            position: absolute
+            border-radius: 100%
+            transform: scale(0,0)
+            content: ""
+            width: 100%
+            height: 100%
+            background: $silver2
+            left: 0
+            top: 0
+            opacity: 1
+            z-index: -1
+            padding: 0 5px
+            transition: .1s
+        &:active:after
+            transform: scale(1,1)
+
+.logo 
+    height: 100%
+    h3
+        font-weight: bold
+.item-link
+    color: $black
+    font-weight: bold
+    transition: .3s all
+    position: relative
+    &:hover
+        color: $black !important
+        background: $silver
+    &:after
+        position: absolute
+        transform: scale(0,1)
+        content: ""
+        width: 100%
+        height: 100%
+        background: $silver2
+        left: 0
+        top: 0
+        opacity: 1
+        padding: 0 5px
+        opacity: .3
+        transition: .3s
+        overflow: hidden
+    &:active:after
+        transform: scale(1,1)
+.item-link__title, .logo
+    width: 180px
+.bars, .item-link__icon
+    width: 41px
+    font-size: 1.2rem
+.item-link__icon
+    padding: 5px 9px
+
+/* main section */
+#main
+    padding: 50px 0
+    .cardBlock
+        padding: 25px
+        box-shadow: $shadow
+        border-radius: 3px
+        background-size: cover
+        color: #fff
+        display: flex
+        min-height: 85px
+        justify-content: flex-start
+        align-items: center
+        font-weight: bold
+        font-size: 1.1rem
+        letter-spacing: 1px
+        margin-bottom: 30px
+        position: relative
+        &:before
+            position: absolute
+            transform: scale(0,1)
+            content: ""
+            width: 100%
+            height: 100%
+            background: rgba(0,0,0,0.1)
+            left: 0
+            top: 0
+            opacity: 1
+            padding: 0 5px
+            transition: .1s
+            overflow: hidden
+        &:active:before
+            transform: scale(1,1)
+
+    .digit
+        background: rgba(0,0,0,0.7)
+        border-radius: 3px
+        padding: 3px 8px
+        margin-right: 8px
+
+.profileBlock
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(/../images/blocks/profile.jpg)
+    background-repeat: no-repeat
+    background-position: center
+
+.articleBlock
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(/../images/blocks/articles.jpg)
+    background-repeat: no-repeat
+    background-position: center
+
+.categoryBlock
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(/../images/blocks/categories.jpg)
+    background-repeat: no-repeat
+    background-position: center
+
+.tagBlock
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(/../images/blocks/tag.jpg)
+    background-repeat: no-repeat
+    background-position: center
+
+.imagesBlock
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(/../images/blocks/images.jpg)
+    background-repeat: no-repeat
+    background-position: center
+
+.usersBlock
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(/../images/blocks/users.jpg)
+    background-repeat: no-repeat
+    background-position: center
+
+
+
+/* CONTENT */
+
+.content 
+    background: #ffffff
+    box-shadow: $shadow
+    width: 100%
+    border-radius: 3px
+    padding: 25px
+    .content__title
+        h1
+            font-weight: bold
+            letter-spacing: 1px
+.buttonsControl
+    display: flex 
+    &__button
+        margin-right: 10px    
+.btn-custom
+    padding: 6px 12px
+    border: 0
+    border-radius: 3px
+    outline: none !important
+.btn-add
+    background: $blue
+    color: #fff
+.btn-delete 
+    color: #ffffff
+    background: $red
+.btn-change
+    background: $orange
+    color: #ffffff
+.btn-ok
+    background: $green   
+    color: #ffffff
+.dataTable
+    margin: 20px 0
+table 
+    width: 100%
+    tr
+        height: 40px !important
+        width: 100%
+        &:nth-child(2n+1)
+            background: $silver
+        &:nth-child(2n)
+            background: $silver2
+
+    td, th 
+        padding: 5px 10px
+
+.dataForm 
+    width: 100%
+    .lineField
+        width: 100%
+        margin-bottom: 20px
+        input[type="text"]  
+            width: 100%
+            min-height: 35px
+            padding: 0 10px
+            border-radius: 3px
+            border: 1px solid $silver2
+            outline: none
+            &:focus 
+                border: 1px solid $blue
+
+        textarea 
+            width: 100%
+            padding: 10px
+            border-radius: 3px
+            border: 1px solid $silver2
+            outline: none
+            &:focus 
+                border: 1px solid $blue
+
+
